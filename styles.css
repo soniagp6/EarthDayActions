@@ -11,7 +11,7 @@ body, html {
 	background-image: url("img/plugs.svg");
 	background-size: 20%;
 	font-size: 20px;
-  	overflow-x: hidden;
+  	overflow: hidden auto;
 }
 
 
@@ -22,13 +22,15 @@ body, html {
 	position: relative;
 }
 
+.panel:nth-of-type(even) {
+	background-color: blue;
+}
+
 .container {
 	width: 80%;
 	max-width: 1000px;
 	margin: 0 auto;
 	display: inline-block;
-	top: 50%;
-	transform: translateY(-60%);
 	position: relative;
 	height: 100%;
 	padding: 1em 2em;
@@ -42,6 +44,8 @@ body, html {
 /*SVGs*/
 svg {
 	position: absolute;
+	filter: drop-shadow(5px 5px 10px black);
+	-webkit-filter: drop-shadow(5px 5px 10px black);
 }
 
 svg path {
@@ -55,8 +59,7 @@ path.whiten {
 #laptop {
 	width: 100%;
 	left: 0;
-	top: 35%;
-	transform: translateY(-35%);
+	top: 6em;
 }
 
 #monitor {
@@ -105,7 +108,7 @@ h3 strong {
 }
 
 #laptop-content h3 {
-	top: 50%;
+	top: 7.5;
 }
 
 

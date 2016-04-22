@@ -21,54 +21,55 @@ document.addEventListener("DOMContentLoaded", function() {
 			.addTo(controller);
 	}
 
-	// create scene for every slide
-	for (var i=0; i<slides.length - 1; i++) {
-		new ScrollMagic.Scene({
-				triggerElement: slides[i],
-				duration: "100%"
-			})
-			.setTween(slideText[i], 1, {opacity: 0}) // trigger a TweenMax.to tween
-			.addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
-	}
+	// // create scene for every slide
+	// for (var i=0; i<slides.length - 1; i++) {
+	// 	new ScrollMagic.Scene({
+	// 			triggerElement: slides[i],
+	// 			duration: "100%"
+	// 		})
+	// 		.setTween(slideText[i], 1, {opacity: 0}) // trigger a TweenMax.to tween
+	// 		.addIndicators() // add indicators (requires plugin)
+	// 		.addTo(controller);
+	// }
 
-	// create scene for every slide
-	for (var i=0; i<slides.length; i++) {
-		new ScrollMagic.Scene({
-				triggerElement: slides[i - 1],
-				duration: "100%"
-			})
-			.setTween(slideText[i], 1, {opacity: 1}) // trigger a TweenMax.to tween
-			.addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
-	}
+	// // create scene for every slide
+	// for (var i=0; i<slides.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 			triggerElement: slides[i - 1],
+	// 			duration: "20%",
+	// 			offset: 500
+	// 		})
+	// 		.setTween(slideText[i], 1, {opacity: 1}) // trigger a TweenMax.to tween
+	// 		.addIndicators() // add indicators (requires plugin)
+	// 		.addTo(controller);
+	// }
 
-	// build tween
-	var tween1 = TweenMax.to("#laptop", 0.5, {scale: 0.3, top: "-8%"});
+	// // build tween
+	// var tween1 = TweenMax.to("#laptop", 0.5, {scale: 0.3, top: "-8%"});
 
-	// build scene and set duration to window height
-	var scene = new ScrollMagic.Scene({triggerElement: slides[2], duration: "10%"})
-					.setTween(tween1)
-					.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
-
-
-	// build tween
-	var tween2 = TweenMax.to(".whiten", 0.5, {opacity: 1});
-
-	// build scene and set duration to window height
-	var scene = new ScrollMagic.Scene({triggerElement: slides[0], duration: "80%"})
-					.setTween(tween2)
-					.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
+	// // build scene and set duration to window height
+	// var scene = new ScrollMagic.Scene({triggerElement: slides[2], duration: "10%"})
+	// 				.setTween(tween1)
+	// 				.addIndicators() // add indicators (requires plugin)
+	// 				.addTo(controller);
 
 
-	// build tween
-	var tween3 = TweenMax.to("#laptop", 0.5, {opacity: 0});
+	// // build tween
+	// var tween2 = TweenMax.to(".whiten", 0.5, {opacity: 1});
 
-	// build scene and set duration to window height
-	var scene = new ScrollMagic.Scene({triggerElement: slides[1], duration: "150%"})
-					.setTween(tween3)
-					.addIndicators() // add indicators (requires plugin)
-					.addTo(controller);
+	// // build scene and set duration to window height
+	// var scene = new ScrollMagic.Scene({triggerElement: slides[0], duration: "80%"})
+	// 				.setTween(tween2)
+	// 				.addIndicators() // add indicators (requires plugin)
+	// 				.addTo(controller);
+
+
+	// // build tween
+	// var tween3 = TweenMax.to("#laptop", 0.5, {opacity: 0});
+
+	// // build scene and set duration to window height
+	// var scene = new ScrollMagic.Scene({triggerElement: slides[1], duration: "150%"})
+	// 				.setTween(tween3)
+	// 				.addIndicators() // add indicators (requires plugin)
+	// 				.addTo(controller);
 });
