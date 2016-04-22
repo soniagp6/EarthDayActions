@@ -1,0 +1,154 @@
+/*scrollmagic*/
+
+body, html {
+	display: block;
+	height: 100%;
+	margin: 0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-align: center;
+	background-color: black;
+	color: white;
+	background-image: url("img/plugs.svg");
+	background-size: 20%;
+	font-size: 20px;
+}
+
+svg {
+	position: absolute;
+}
+
+svg path {
+	opacity: .8;
+}
+
+
+path.whiten {
+	opacity: 0;
+}
+
+#laptop {
+	width: 100%;
+	left: 0;
+	top: 35%;
+	transform: translateY(-35%);
+}
+
+#monitor {
+	width: 90%;
+}
+
+.monitor-text {
+	width: 40%;
+    margin-left: 20%;
+    top: 24%;
+    color: white;
+}
+
+.white {
+	color: white;
+}
+
+.high {
+	top: 25%;
+}
+
+#laptop-content {
+	height: 100%;
+}
+
+.panel {
+	height: 150%;
+	display: block;
+	position: relative;
+}
+
+.lengthen {
+	margin-bottom: 100%;
+}
+
+.container {
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-60%);
+	position: relative;
+	height: 80%;
+	padding: 1em 2em;
+}
+
+.scrollmagic-pin-spacer {
+	text-align: center;
+}
+
+@-webkit-keyframes pulsate {
+    0% {color: #99ECF7}
+    50% {color: white}
+    100% {color: #99ECF7}
+}
+@-moz-keyframes pulsate {
+    0% {color: #99ECF7}
+    50% {color: white}
+    100% {color: #99ECF7}
+}
+@keyframes pulsate {
+    0% {color: #99ECF7}
+    50% {color: white}
+    100% {color: #99ECF7}
+}
+
+h3 {
+	position: relative;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+    font-size: 2.5em;
+    line-height: 60px;
+    font-weight: bold;
+    opacity: 0;
+    top: 35%;
+    transform: translateY(-50%);
+    color: #006E16;
+    text-align: left;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#laptop-content h3 {
+	top: 50%;
+}
+
+h3 strong {
+	font-weight: 500;
+	font-size: 1.2em;
+	position: relative;
+	top: .1em;
+}
+
+.buttons {
+	width: 22%;
+	top: 10%;
+    position: absolute;
+    right: 0;
+}
+
+.buttons a {
+	width: 45%;
+	display: block;
+	background-repeat: no-repeat;
+	color: transparent;
+	height: 7em;
+	float: left;
+}
+
+a.mac {
+	background-image: url("img/apple-logo.svg");
+	height: 5.5em;
+	margin-left: 10%;
+}
+
+a.pc {
+	background-image: url("img/windows-logo.svg");
+	position: relative;
+	top: .7em;
+}

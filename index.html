@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script src="plugins/animation.gsap.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<!-- Facebook -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=822616104444894";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- End Facebook -->
+	<section class="panel">
+		<div class="container">
+			<div class="spacer s2"></div>
+			<div id="trigger1" class="spacer s0"></div>
+			<svg id="laptop" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 128 95" style="enable-background:new 0 0 128 95;" xml:space="preserve">
+				<style type="text/css">
+					.st0{font-family:'HelveticaNeue-Bold';}
+					.st1{font-size:5px;}
+				</style>
+				<title>MacBook Pro</title>
+				<desc>Created with Sketch.</desc>
+				<g>
+					<g transform="translate(-536.000000, -250.000000)">
+						<g transform="translate(120.000000, 224.000000)">
+							<path fill="#006E16" d="M527,89c0,1.1-0.9,2-2,2h-90c-1.1,0-2-0.9-2-2V33c0-1.1,0.9-2,2-2h90c1.1,0,2,0.9,2,2V89z M525,30h-90c-1.7,0-3,1.3-3,3
+								v56c0,1.7,1.3,3,3,3h90c1.7,0,3-1.3,3-3V33C528,31.3,526.7,30,525,30L525,30z M542,98c0,1.1-0.9,2-2,2H420c-1.1,0-2-0.9-2-2v-2
+								h10h44c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2h44h10V98z M430,32c0-2.2,1.8-4,4-4h92c2.2,0,4,1.8,4,4v62H430V32z M532,94V32
+								c0-3.3-2.7-6-6-6h-92c-3.3,0-6,2.7-6,6v62h-12v4c0,2.2,1.8,4,4,4h120c2.2,0,4-1.8,4-4v-4H532z"/>
+						</g>
+					</g>
+				</g>
+				<path class="whiten" fill="#ffffff" opacity="0" d="M109,65H19c-1.1,0-2-0.9-2-2V7c0-1.1,0.9-2,2-2H109c1.1,0,2,0.9,2,2V63C111,64.1,110.1,65,109,65z"/>
+				</svg>
+				<h3></h3>
+			<div class="spacer s2"></div>
+		</div>
+	</section>
+	<section class="panel" id="laptop-content">
+		<div class="container"><h3 class="monitor" id="animate">Did you know <br/><strong>50-70%</strong> of the energy used by a computer is <strong>JUST</strong> for lighting the screen? </h3></div>
+	</section>
+	<section class="panel">
+		<svg id="monitor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 144.5 149.909625" enable-background="new 0 0 144.5 119.9277" xml:space="preserve"><g><path stroke="none" stroke-width="1" fill="#006E16" d="M142.5,0H2C0.8955,0,0,0.8955,0,2v89.5c0,1.1045,0.8955,2,2,2h47.1563v8.6658v1.7454l-11.4502,13.3867   c-0.4043,0.4727-0.4961,1.1377-0.2363,1.7031c0.2598,0.5645,0.8252,0.9268,1.4473,0.9268h65.333   c0.6113,0,1.1689-0.3506,1.4355-0.9014c0.2656-0.5508,0.1924-1.2051-0.1885-1.6836l-10.6533-13.3994V93.5H142.5   c1.1045,0,2-0.8955,2-2V2C144.5,0.8955,143.6045,0,142.5,0z M91.6563,102.1658H52.3438V93.5h39.3125V102.1658z M100.9473,116.7402   H42.377l9.584-11.2041c0.1062-0.1243,0.1812-0.2682,0.2443-0.4161h39.5927c0.0557,0.1301,0.1157,0.2592,0.2051,0.3712   L100.9473,116.7402z M140.5,89.5H4V75.75h136.5V89.5z M140.5,71.75H4V4h136.5V71.75z"/><circle fill="#006E16" cx="72.25" cy="82.9165" r="4.25"/><path fill="#006E16" d="M7.75,69.7188h129c0.8799,0,1.5938-0.7139,1.5938-1.5938v-60.5c0-0.8799-0.7139-1.5938-1.5938-1.5938h-129   c-0.8799,0-1.5938,0.7139-1.5938,1.5938v60.5C6.1563,69.0049,6.8701,69.7188,7.75,69.7188z M9.3438,9.2188h125.8125v57.3125H9.3438   V9.2188z"/></g></svg>
+		<div class="container"><h3 class="monitor-text">...and that number is even higher with a big monitor attached!</h3></div>
+	</section>
+	<section class="panel">
+		<div class="container"><h3 class="white high">That means when you step away from your computer, it's still burning 50% of the power it uses at full capacity!</h3></div>
+	</section>
+	<section class="panel">
+		<div class="container"><h3 class="white high">So if you want do something good for the environment today...</h3>
+		</div>
+	</section>
+	<section class="panel">
+		<div class="container"><h3 class="white high">Change your screensaver and energy preferences on your computer. Here's how:</h3>
+		<div class="buttons"> <a target="_blank" href="#" class="pc">PC</a> <a target="_blank" href="#" class="mac">Mac</a></div>
+		</div>
+	</section>
+	<div class="fb-share-button" data-href="http://earthdayactions.com" data-layout="button_count" data-mobile-iframe="true"></div>
+</body>
+</html>
+
+
+
+
+
+
+
