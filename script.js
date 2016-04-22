@@ -43,8 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			.addTo(controller);
 	}
 
-
-
 	// build tween
 	var tween1 = TweenMax.to("#laptop", 0.5, {scale: 0.3, top: "-8%"});
 
