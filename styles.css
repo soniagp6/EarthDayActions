@@ -6,24 +6,29 @@ body, html {
 	margin: 0;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	text-align: center;
-	background-color: black;
+	background-color: #ECC28E;
 	color: white;
-	background-image: url("img/plugs.svg");
 	background-size: 20%;
 	font-size: 20px;
-  	overflow: hidden auto;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 
 /*Vertical Panels*/
+.scrollmagic-pin-spacer {
+	text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
 .panel {
 	height: 100%;
 	display: block;
 	position: relative;
-}
-
-.panel:nth-of-type(even) {
-	background-color: blue;
+	border-bottom: 1px solid red;
 }
 
 .container {
@@ -34,18 +39,27 @@ body, html {
 	position: relative;
 	height: 100%;
 	padding: 1em 2em;
+	text-align: center;
 }
 
-.scrollmagic-pin-spacer {
-	text-align: center;
+.halfway-trigger {
+	height: 50%;
+	position: absolute;
+	top: 50%;
 }
 
 
 /*SVGs*/
+
 svg {
+	display: inline-block;
+	width: 100%;
 	position: absolute;
-	filter: drop-shadow(5px 5px 10px black);
-	-webkit-filter: drop-shadow(5px 5px 10px black);
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 
 svg path {
@@ -56,33 +70,24 @@ path.whiten {
 	opacity: 0;
 }
 
-#laptop {
-	width: 100%;
-	left: 0;
-	top: 6em;
-}
-/*
-#monitor {
-	width: 90%;
-}
-*/
 
 
 /*Text*/
 h3 {
-	position: relative;
-    text-align: center;
-    max-width: 50%;
-    margin: 0 auto;
-    font-size: 2.5em;
+	position: absolute;
+    width: 100%;
+    font-size: 2.5vw;
     line-height: 1.2em;
     font-weight: bold;
-    opacity: 0;
-    top: 35%;
-    transform: translateY(-50%);
+    opacity: 1;
     color: #006E16;
     text-align: left;
     font-family: "Arial Black", Gadget, sans-serif;
+    top: 50%;
+	left: 0;
+	transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
 }
 
 h3 strong {
@@ -98,6 +103,10 @@ h3 strong {
 
 .high {
 	top: 25%;
+}
+
+.laptop-text {
+	padding: 5% 20%;
 }
 
 .monitor-text {

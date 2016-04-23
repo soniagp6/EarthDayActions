@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // init
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
+    var controller = new ScrollMagic.Controller({
+    	globalSceneOptions: {
 			triggerHook: 'onLeave'
 		}
 	});
 
-
 	// get all slides
 	var slides = document.querySelectorAll("section.panel");
-	var slideText = document.querySelectorAll("h3");
+	var halfwayTrigger = document.querySelectorAll("section.panel .halfway-trigger");
+	var slideText = document.querySelectorAll("section.panel h3");
+
 
 	// create scene for every slide
 	for (var i=0; i<slides.length; i++) {
@@ -20,6 +20,33 @@ document.addEventListener("DOMContentLoaded", function() {
 			.addIndicators() // add indicators (requires plugin)
 			.addTo(controller);
 	}
+
+
+	// var scene1 = new ScrollMagic.Scene({triggerElement: "#step-away-panel"})
+	// 	.setPin("#monitor")
+	// 	.addIndicators() // add indicators (requires plugin)
+	// 	.addTo(controller);
+
+
+	// for (var i=0; i<slides.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 			triggerElement: slides[i + 1]
+	// 		})
+	// 		.setPin(slideText[i])
+	// 		.addIndicators("slide text") // add indicators (requires plugin)
+	// 		.addTo(controller);
+	// }
+
+
+	// for (var i=0; i<slides.length; i++) {
+	// 	new ScrollMagic.Scene({
+	// 			triggerElement: halfwayTrigger[i + 1],
+	// 			duration: "50%"
+	// 		})
+	// 		.setTween(slideText[i], 1, {opacity: 1}) // trigger a TweenMax.to tween
+	// 		.addIndicators("halfwayTrigger") // add indicators (requires plugin)
+	// 		.addTo(controller);
+	// }
 
 	// // create scene for every slide
 	// for (var i=0; i<slides.length - 1; i++) {
@@ -32,17 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 		.addTo(controller);
 	// }
 
-	// // create scene for every slide
-	// for (var i=0; i<slides.length; i++) {
-	// 	new ScrollMagic.Scene({
-	// 			triggerElement: slides[i - 1],
-	// 			duration: "20%",
-	// 			offset: 500
-	// 		})
-	// 		.setTween(slideText[i], 1, {opacity: 1}) // trigger a TweenMax.to tween
-	// 		.addIndicators() // add indicators (requires plugin)
-	// 		.addTo(controller);
-	// }
+
 
 	// // build tween
 	// var tween1 = TweenMax.to("#laptop", 0.5, {scale: 0.3, top: "-8%"});
