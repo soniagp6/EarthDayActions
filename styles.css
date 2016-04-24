@@ -8,7 +8,6 @@ body, html {
 	text-align: center;
 	background-color: #ECC28E;
 	color: white;
-	background-size: 20%;
 	font-size: 20px;
 }
 
@@ -22,6 +21,11 @@ body, html {
 	text-align: center;
     width: 100%;
     overflow: hidden;
+    /*z-index: 0;*/
+}
+
+.scrollmagic-pin-spacer:nth-child(3), .scrollmagic-pin-spacer:nth-child(4) {
+	/*z-index: 1;*/
 }
 
 .panel {
@@ -29,6 +33,7 @@ body, html {
 	display: block;
 	position: relative;
 	border-bottom: 1px solid red;
+	z-index: 0
 }
 
 .container {
@@ -48,6 +53,16 @@ body, html {
 	top: 50%;
 }
 
+#laptop-content {
+	margin-bottom: 100%;
+}
+
+#monitor-attached-text-panel,
+#step-away-panel {
+	margin-bottom: 200%;
+}
+
+
 
 /*SVGs*/
 
@@ -66,8 +81,19 @@ svg path {
 	opacity: .8;
 }
 
-path.whiten {
+path#whiten-laptop,
+path#whiten-monitor
+ {
 	opacity: 0;
+}
+
+#monitor {
+	transform: translateY(0);
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	top: 5%;
+	width: 110%;
+	left: 0;
 }
 
 
@@ -76,10 +102,10 @@ path.whiten {
 h3 {
 	position: absolute;
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     line-height: 1.2em;
     font-weight: bold;
-    opacity: 1;
+    opacity: 0;
     color: #006E16;
     text-align: left;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -88,6 +114,12 @@ h3 {
 	transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
 	-webkit-transform: translateY(-100%);
+}
+
+@media screen and (min-width: 1200px) {
+	h3 {
+		font-size: 45px;
+	}
 }
 
 h3 strong {
@@ -110,15 +142,16 @@ h3 strong {
 }
 
 .monitor-text {
-	width: 40%;
-    margin-left: 20%;
-    top: 24%;
-    color: white;
+	width: 45%;
+	top: 35%;
+	left: 10%;
 }
-/*
-#laptop-content h3 {
-	top: 7.5;
-}*/
+
+.step-away-text {
+	top: 40%;
+    width: 70%;
+    left: 10%;
+}
 
 
 
