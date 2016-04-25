@@ -16,69 +16,51 @@ body, html {
 }
 
 
-/*Vertical Panels*/
-.scrollmagic-pin-spacer {
-	text-align: center;
-    width: 100%;
-    overflow: hidden;
-    /*z-index: 0;*/
-}
-
-.scrollmagic-pin-spacer:nth-child(3), .scrollmagic-pin-spacer:nth-child(4) {
-	/*z-index: 1;*/
-}
-
-.panel {
-	height: 100%;
+/*Spacing*/
+.spacer {
 	display: block;
-	position: relative;
-	border-bottom: 1px solid red;
-	z-index: 0
+	height: 50px;
 }
 
-.container {
-	width: 80%;
-	max-width: 1000px;
-	margin: 0 auto;
-	display: inline-block;
-	position: relative;
-	height: 100%;
-	padding: 1em 2em;
-	text-align: center;
+.big-spacer {
+	display: block;
+	height: 500px;
 }
 
-.halfway-trigger {
-	height: 50%;
-	position: absolute;
-	top: 50%;
+.xl-spacer {
+	display: block;
+	height: 1000px;
 }
 
-#laptop-content {
-	margin-bottom: 100%;
+#testdiv {
+	width: 10px;
+	height: 10px;
+	background-color: red;
 }
 
-#monitor-attached-text-panel,
-#step-away-panel {
-	margin-bottom: 200%;
+.pin, .fadetext {
+	height: 1px;
+	width: 50px;
+	background-color: blue;
 }
-
 
 
 /*SVGs*/
 
-svg {
-	display: inline-block;
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-}
-
 svg path {
 	opacity: .8;
+}
+
+.laptop-svg {
+	width: 80%;
+	margin: 0 auto;
+	transform: 0;
+}
+
+#monitor-svg {
+	width: 70%;
+	margin: 0 auto;
+	transform: 0;
 }
 
 path#whiten-laptop,
@@ -87,20 +69,10 @@ path#whiten-monitor
 	opacity: 0;
 }
 
-#monitor {
-	transform: translateY(0);
-	-ms-transform: translateY(0);
-	-webkit-transform: translateY(0);
-	top: 5%;
-	width: 110%;
-	left: 0;
-}
-
-
 
 /*Text*/
 h3 {
-	position: absolute;
+	position: relative;
     width: 100%;
     font-size: 3.5vw;
     line-height: 1.2em;
@@ -109,11 +81,6 @@ h3 {
     color: #006E16;
     text-align: left;
     font-family: "Arial Black", Gadget, sans-serif;
-    top: 50%;
-	left: 0;
-	transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
 }
 
 @media screen and (min-width: 1200px) {
@@ -138,30 +105,27 @@ h3 strong {
 }
 
 .laptop-text {
-	padding: 5% 20%;
+	width: 50%;
+	margin: 0 auto;
 }
 
-.monitor-text {
-	width: 45%;
-	top: 35%;
-	left: 10%;
-}
-
+.monitor-text,
 .step-away-text {
-	top: 40%;
-    width: 70%;
-    left: 10%;
+	width: 45%;
+	margin: 10% auto;
 }
 
+.internal-text,
+rect.internal-text,
+.internal-image {
+	opacity: 0;
+}
 
 
 /*Links to instructions*/
 
 .buttons {
 	width: 22%;
-	top: 10%;
-    position: absolute;
-    right: 0;
 }
 
 .buttons a {
